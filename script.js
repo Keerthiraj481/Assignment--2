@@ -35,36 +35,6 @@ const comparingArray = function (arr1, arr2) {
 };
 console.log(` \nAnswer 2 --->>> ${difference([1, 2, 3], [100, 2, 1, 10])}`);
 
-// Question 3 --> Write a JavaScript function to create an array of arrays, ungrouping the elements in an array produced by zip.
-
-const unzip = function (arr1) {
-  let finalArray = [];
-  let strArr = [],
-    numArr = [],
-    booleanArr = [];
-  for (let i = 0; i < arr1.length; i++) {
-    for (let j = 0; j < arr1[i].length; j += 1) {
-      if (typeof arr1[i][j] === "string") {
-        strArr.push(arr1[i][j]);
-      } else if (typeof arr1[i][j] === "number") {
-        numArr.push(arr1[i][j]);
-      } else if (typeof arr1[i][j] === "boolean") {
-        booleanArr.push(arr1[i][j]);
-      }
-    }
-  }
-  finalArray.push(strArr, numArr, booleanArr);
-  console.log(`\nAnswer 3 ---->> ${finalArray}`);
-};
-unzip([
-  ["a", 1, true],
-  ["b", 2, false],
-]);
-unzip([
-  ["a", 1, true],
-  ["b", 2],
-]);
-
 // Question 4 -->> Write a JavaScript program to find the most frequent item in an array.
 
 const freqItem = function (arr) {
